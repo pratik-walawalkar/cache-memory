@@ -2,17 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#define FILENAME "input_problem_1.txt"
 
 #define MAXROWS 100
 #define MAXCOLS 500
-
-//char memBlockAddress[MAXROWS];
-//char cache[8][8];
-
-//char listOfCondons[MAXWORDS][MAXCOLS];
-//char codonsStart[] = "AUG";
-//char codonsEnd[MAXROWS][MAXCOLS] = {"UAA", "UAG", "UGA"};
 
 int x[4] = {-1, 0, 1, 0};
 int y[4] = {0, 1, 0, -1};
@@ -20,6 +12,7 @@ int y[4] = {0, 1, 0, -1};
 void printInputs(int numTestCases, int numAccesses, char memBlockAddress[MAXROWS]){
     printf("%d \n", numTestCases);
     printf("%d\n",numAccesses);
+
     for (int i = 0; i < numAccesses; i++) {
         printf("%d ", memBlockAddress[i]); 
     }
@@ -86,8 +79,6 @@ void totalHitsMiss(char memBlockAddress[], int numAccesses, int caseNum){
         char cache[8][8];        
         clearCache(numBlocks[i], cache, numSets);
 
-        //char cache[numSets][numBlocks[i]];
-        // printf("numSets:%d numBlocks:%d \n", numSets, numBlocks[i]);
         for(int j=0; j<numAccesses; j++){
             index = (memBlockAddress[j])%(numSets);
 
@@ -99,7 +90,6 @@ void totalHitsMiss(char memBlockAddress[], int numAccesses, int caseNum){
                 missCount[i]++;
             }
         }
-        //printf("Hit: %d | Miss: %d \n", hitCount, missCount);
     }
     displayOutput(caseNum, hitCount, missCount);
 }
