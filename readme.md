@@ -1,3 +1,5 @@
+# Problem Statement
+
 Caches are used to reduce the average time to access data from main memory in a computer.
 When the memory block requested is present in a cache, it is called a hit. When the memory
 block is not in the cache, it is called a miss, and the requested memory block is loaded into the
@@ -13,21 +15,27 @@ Your program should the input file that contains the memory block addresses and 
 hits and missed for each cache configuration and the type of cache with the largest number of
 hits:
 
-Test case 1: 1-way set associative hits: # misses: #
-2-way set associative hits: # misses: #
-4-way set associative hits: # misses: #
-8-way set associative hits: # misses: #
+## Expected Output
+
+Test case 1: 1-way set associative hits: # misses: #  
+2-way set associative hits: # misses: #  
+4-way set associative hits: # misses: #  
+8-way set associative hits: # misses: #  
+
 Best scheme: #-way set associative
-Test case 2:
-1-way set associative hits: # misses: #
-2-way set associative hits: # misses: #
-4-way set associative hits: # misses: #
-8-way set associative hits: # misses: #
+
+Test case 2:  
+1-way set associative hits: # misses: #  
+2-way set associative hits: # misses: #  
+4-way set associative hits: # misses: #  
+8-way set associative hits: # misses: #  
+
 Best scheme: #-way set associative
+
 and so on.
 
-The test file has this format:
-# number of test cases
-# number of accesses
-# memory block addresses
-5
+The test file has this format:  
+#number of test cases  
+#number of accesses  
+#memory block addresses  
+
